@@ -10,24 +10,22 @@ Write a C program to read 3 characters one by one and print the characters in a 
 4.	End the program.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+int main()
+{
+    char ch,ch1,ch2;
+    scanf("%c%c%c",&ch,&ch1,&ch2);
+    printf("The reverse of %c%c%c is %c%c%c",ch,ch1,ch2,ch2,ch1,ch);
+    return 0;
+    
+}
+```
+
 
 ## OUTPUT:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/3a11c923-a118-4c7d-922f-19c611d504f7)
 
 ## RESULT:
 Thus the program to read 3 characters one by one and print the characters in a reverse order has been executed successfully.
@@ -46,27 +44,31 @@ Write a C program to read A values and check whether A is positive number or not
 6.End the program.
 
 # PROGRAM:
+```
+#include <stdio.h>
 
+int main() {
+    int A;
+    scanf("%d", &A);
+    if (A > 0)
+ {
+   printf("%d is a positive number.\n", A);
+    }
+else
+{
+printf("%d is not a positive number.\n", A);
+ }
+return 0;
+}
+```
 # OUTPUT:
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/c21965e4-9c6d-4e20-b2c9-f2ad48871cc1)
 
 # RESULT:
 Thus the program to read A values and check whether A is positive number or not has been executed successfully.
  
  
- 
-
-
-# EX-03- Operators-Expressions
+ # EX-03- Operators-Expressions
 ## AIM:
 Write a program to find minimum between two fraction numbers using conditional operator or ternary operator.
 
@@ -80,21 +82,34 @@ Write a program to find minimum between two fraction numbers using conditional o
 7.	Print the minimum value.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    float num1, den1, num2, den2;
+    float frac1, frac2;
+    scanf("%f %f", &num1, &den1);
+    scanf("%f %f", &num2, &den2);
+    if (den1 == 0 || den2 == 0) {
+        printf("Error: Denominator cannot be zero.\n");
+        return 1;
+    }
+    frac1 = num1 / den1;
+    frac2 = num2 / den2;
+    (frac1 < frac2)
+        ? printf("Minimum fraction is: %.2f/%.2f = %.2f\n", num1, den1, frac1)
+        : printf("Minimum fraction is: %.2f/%.2f = %.2f\n", num2, den2, frac2);
+
+    return 0;
+}
+
+```
 
 ## OUTPUT:
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/a18169f1-b2e5-4376-b9cf-45971b67eeaf)
 
 ## RESULT:
 Thus the program to find minimum between two fraction numbers using conditional operator or ternary operator has been executed successfully.
-
-
 
 
 # EX-04- Using Conditional Statements
@@ -111,8 +126,19 @@ Write a C program to check whether the input value is equal to 1 using simple if
 6.	End the program.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    if(a==1)
+       printf("TRUE");
+}
+```
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/ee9cbb05-aae6-4041-abb3-24b6e7d29e9f)
 
 
 
@@ -147,8 +173,42 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
+```
+#include <stdio.h>
 
+int main() {
+    int m1, m2, m3, total;
+    float percentage;
+
+    printf("Enter marks of three subjects:\n");
+    scanf("%d %d %d", &m1, &m2, &m3);
+
+   
+    total = m1 + m2 + m3;
+    percentage = total / 3.0;
+
+    
+    printf("Total Marks = %d\n", total);
+    printf("Percentage = %.2f%%\n", percentage);
+
+   
+    if (m1 < 33 || m2 < 33 || m3 < 33) {
+        printf("Result: Fail (One or more subjects below 33)\n");
+    } else if (percentage >= 60) {
+        printf("Result: First Division\n");
+    } else if (percentage >= 50) {
+        printf("Result: Second Division\n");
+    } else if (percentage >= 40) {
+        printf("Result: Pass\n");
+    } else {
+        printf("Result: Fail\n");
+    }
+
+    return 0;
+}
+```
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/087fbb5e-e50f-4675-91ba-0b6dcbb79915)
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
